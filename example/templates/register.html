@@ -1,0 +1,134 @@
+{% extends "sitebase.html" %}
+{% load dajaxice_templatetags %}
+{% load i18n %}
+
+{% block extra_style %}
+  <link rel="stylesheet" href="/static/social.css">      
+{% endblock extra_style %}
+
+{% block middlecontent %}
+
+
+<div class="main2 desktop chrome right-sidebar">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <br/>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <br/>
+
+                        <br/>
+                        <div class="col-sm-3">&nbsp;</div>
+                        <div class="col-sm-6" id='loginform'>
+                            <div class="panel panel-default">
+                                <div class="panel-heading"> <i class="glyph-icon icon-user"></i> &nbsp; S'enregistrer </div>
+                                <div class="panel-body">
+
+                                    <br>
+                                      <!-- second form to hold -->  
+                                    <form class="form-horizontal" method="post" enctype="multipart/form-data" role="form">
+                                      {% csrf_token %}
+
+                                     <div class="control-group">
+                                        <label class="control-label">Prenom</label>
+                                        <div class="controls">
+                                           <input type="text" id='id_username' name="username" class="span6">
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Nom de famille</label>
+                                        <div class="controls">
+                                           <input type="text" id='id_last_name' name="last_name" class="span6">
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">adresse email</label>
+                                        <div class="controls">
+                                           <input type="text" id='id_email' name='email' class="span6">
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">mot de passe</label>
+                                        <div class="controls">
+                                           <input type="text" id='id_password1' name="password1" class="span6">
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">verifier mot de passe</label>
+                                        <div class="controls">
+                                           <input type="text" id='id_password2' name="password2" class="span6">
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">N° de telephone</label>
+                                        <div class="controls">
+                                           <input id="id_telephone" type="text" name="telephone" maxlength="200" placeholder="Telephone" class='span6'>
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Adresse</label>
+                                        <div class="controls">
+                                           <input id="id_adress" type="text" name="adress" maxlength="200" placeholder="Adresse" class='span6'>
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     
+                                     <div class="form-actions">
+                                        <button type="submit" class="btn btn-primary">Valider</button>
+                                        <button type="button" class="btn btn-danger" onclick='javascrpt:window.location.href="/"'>Retour</button>
+                                     </div>
+                                  </form>
+
+                                </div>
+
+                                <div class="panel-footer">
+                                    <b>Vous possedez un compte ?</b> <a href="/accounts/login/">S'authentifier</a>
+                                </div>
+
+                          </div> <!-- end panel-default -->
+
+                      </div> <!-- end col-sm-6 -->
+
+                      <div class="col-sm-3">&nbsp;</div>
+                      <div class="clearfix"></div>
+                      <br/>
+
+                      </div>
+                </div> <!-- end panel panel-default --> 
+
+                <div class="clear"></div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                        <img src="http://placehold.it/1010x70" alt="placeholder image" class='img-responsive'></div>
+                    </div>
+                </div>
+
+          </div> <!-- end col-sm-12 --> 
+
+    </div> <!-- end row --> 
+  
+  <div class="clear"></div>
+
+</div> <!-- end container -->
+</div> <!-- end main2 -->
+{% endblock middlecontent %}
+
+{% block sidecontent %}
+  
+{% endblock sidecontent %}

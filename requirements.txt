@@ -1,0 +1,4 @@
+django==1.4.3
+psycopg2
+dj_database_url
+-e hg+https://bitbucket.org/etienned/pil-2009-raclette/#egg=PIL
